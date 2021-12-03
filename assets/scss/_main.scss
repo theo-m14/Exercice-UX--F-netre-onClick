@@ -17,5 +17,11 @@ section {
     .hide {
       display: none;
     }
+    span {
+      float: right;
+      font-size: 22px;
+      color: red;
+      border: solid 2px black;
+    }
   }
 }

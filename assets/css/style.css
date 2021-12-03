@@ -19,5 +19,11 @@ section article .show {
 section article .hide {
   display: none;
 }
+section article span {
+  float: right;
+  font-size: 22px;
+  color: red;
+  border: solid 2px black;
+}
 
 /*# sourceMappingURL=style.css.map */
