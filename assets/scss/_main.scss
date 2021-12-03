@@ -7,5 +7,15 @@ section {
   gap: 3em;
   article {
     width: 30%;
+    position: relative;
+    .show {
+      position: absolute;
+      z-index: 3;
+      background-color: #fafafa;
+      border: black solid 2px;
+    }
+    .hide {
+      display: none;
+    }
   }
 }

@@ -8,6 +8,16 @@ section {
 }
 section article {
   width: 30%;
+  position: relative;
+}
+section article .show {
+  position: absolute;
+  z-index: 3;
+  background-color: #fafafa;
+  border: black solid 2px;
+}
+section article .hide {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
