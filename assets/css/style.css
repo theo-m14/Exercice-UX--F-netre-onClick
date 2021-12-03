@@ -1,3 +1,7 @@
+main {
+  position: relative;
+}
+
 section {
   margin-top: 6em;
   display: flex;
@@ -8,13 +12,28 @@ section {
 }
 section article {
   width: 30%;
-  position: relative;
 }
-section article .show {
+section article div {
+  padding: 1em;
   position: absolute;
   z-index: 3;
   background-color: #fafafa;
   border: black solid 2px;
+}
+section article .show {
+  top: 70%;
+  left: 50%;
+  width: 70%;
+  animation-name: glissfromtop;
+  animation-duration: 5s;
+  transform: translate(-50%);
+}
+section article .goToHide {
+  width: 70%;
+  animation-name: glissOut;
+  animation-duration: 2s;
+  transform: translate(-50%, 450%);
+  left: 50%;
 }
 section article .hide {
   display: none;
@@ -24,6 +43,20 @@ section article span {
   font-size: 22px;
   color: red;
   border: solid 2px black;
+}
+
+@keyframes glissfromtop {
+  from {
+    top: -20%;
+  }
+  85% {
+    top: 65%;
+  }
+}
+@keyframes glissOut {
+  from {
+    transform: translate(-50%, 0%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

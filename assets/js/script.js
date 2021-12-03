@@ -23,10 +23,21 @@ allH1.forEach(h1 => { //On ajoute une boucle foreach pour ajouter un eventlisten
     });
 });
 
- window.addEventListener("click", function(){
+ /*window.addEventListener("click", function(){
      allH1.forEach(h1 => {
         if(document.querySelector("#" +h1.parentElement.id+" div").classList.value=="show"){
             document.querySelector("#" +h1.parentElement.id+" div").classList.replace("show", "hide");
         }
      });
- });
+ });*/
+
+ window.addEventListener("click", function(){
+    allH1.forEach(h1 => {
+       if(document.querySelector("#" +h1.parentElement.id+" div").classList.value=="show"){
+            document.querySelector("#" +h1.parentElement.id+" div").classList.replace("show", "goToHide");
+            this.setTimeout(function(){
+                document.querySelector("#" +h1.parentElement.id+" div").classList.replace("goToHide", "hide");
+            },2000);
+       }
+    });
+});
